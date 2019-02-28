@@ -5,44 +5,8 @@
 'fileTypes': [
   'dhall'
 ]
-'scopes':
-  'comment': 'punctuation.definition.comment'
-  'rule > rulename': 'punctuation.definition.variable.bold'
-  'element > rulename': 'variable'
-  'repeat': 'constant.numeric'
-  'char_val': 'string'
-  'prose_val': 'string'
-  'num_val': 'constant.numeric'
-  '''
-    "=",
-    "=/",
-    "*",
-    "/",
-    "[", "]",
-    "(", ")"
-  ''': 'keyword.control'
-  '''
-    "ALPHA",
-    "BIT",
-    "CHAR",
-    "CR",
-    "CRLF",
-    "CTL",
-    "DIGIT",
-    "DQUOTE",
-    "HEXDIG",
-    "HTAB",
-    "LF",
-    "LWSP",
-    "OCTET",
-    "SP",
-    "VCHAR",
-    "WSP"
-  ''': 'punctuation.definition.identity'
-'folds': [
-  {
-    'type': 'rule'
-  }
-]
-'comments':
-  'start': '; '
+# 'scopes':
+# 'folds': [
+# ]
+# 'comments':
+#   'start': '; '
