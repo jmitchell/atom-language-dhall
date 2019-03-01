@@ -5,8 +5,92 @@
 'fileTypes': [
   'dhall'
 ]
-# 'scopes':
-# 'folds': [
-# ]
-# 'comments':
-#   'start': '; '
+'scopes':
+  'block_comment': 'comment.block',
+  'line_comment': 'comment.line',
+
+  'double_literal_raw': 'constant.numeric',
+  'integer_literal_raw': 'constant.numeric',
+  'natural_literal_raw': 'constant.numeric',
+  'hash': 'constant.numeric',
+  'Infinity_raw': 'constant.numeric',
+  # 'primitive_expression': { exact: '-Infinity', scopes: 'constant.numeric' },
+
+  'double_quote_literal': 'string.quoted.double',
+  'single_quote_literal': 'string.quoted.single',
+
+  'if_raw': 'keyword.control',
+  'then_raw': 'keyword.control',
+  'else_raw': 'keyword.control',
+  'let_raw': 'keyword.control',
+  'in_raw': 'keyword.control',
+  'as_raw': 'keyword.control',
+  'using_raw': 'keyword.control',
+  'merge_raw': 'keyword.control',
+  'missing_raw': 'keyword.control',
+
+  'equal': 'keyword.operator',
+  'or': 'keyword.operator',
+  'plus': 'keyword.operator',
+  'text_append': 'keyword.operator',
+  'list_append': 'keyword.operator',
+  'and': 'keyword.operator',
+  'times': 'keyword.operator',
+  'double_equal': 'keyword.operator',
+  'not_equal': 'keyword.operator',
+  'dot': 'keyword.operator',
+  'open_brace': 'keyword.operator',
+  'close_brace': 'keyword.operator',
+  'open_bracket': 'keyword.operator',
+  'close_bracket': 'keyword.operator',
+  'open_angle': 'keyword.operator',
+  'close_angle': 'keyword.operator',
+  'bar': 'keyword.operator',
+  'comma': 'keyword.operator',
+  'open_parens': 'keyword.operator',
+  'close_parens': 'keyword.operator',
+  'at': 'keyword.operator',
+  'colon': 'keyword.operator',
+  'import_alt': 'keyword.operator',
+  'combine': 'keyword.operator',
+  'combine_types': 'keyword.operator',
+  'prefer': 'keyword.operator',
+  'lambda': 'keyword.operator',
+  'forall': 'keyword.operator',
+  'arrow': 'keyword.operator',
+
+  'True_raw': 'constant.other.symbol',
+  'False_raw': 'constant.other.symbol',
+
+  'reserved_namespaced_raw': 'keyword.other.special-method',
+  'identifier_reserved_prefix': 'support.function',
+  'reserved_raw': 'keyword',
+  'Text_raw': 'keyword',
+
+  'label': 'constant.other',
+
+  'import_hashed': 'meta.require'
+'comments':
+  'start': '-- '
+'folds': [
+  {
+    type: ['block_comment']
+  },
+  {
+    start: {type: 'open_brace', index: 0},
+    end: {type: 'close_brace', index: -1},
+  },
+  {
+    start: {type: 'open_bracket', index: 0},
+    end: {type: 'close_bracket', index: -1},
+  },
+  {
+    start: {type: 'open_angle', index: 0},
+    end: {type: 'close_angle', index: -1},
+  },
+  {
+    start: {type: 'open_parens', index: 0},
+    end: {type: 'close_parens', index: -1},
+  },
+
+]
